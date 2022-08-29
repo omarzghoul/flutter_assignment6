@@ -17,6 +17,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   bool val = false;
 
+  String countTime = "25:00";
+
   Map colors = {
     "primary": Color(0xffF87373),
     "appbar": Color(0xffF24646),
@@ -57,6 +59,7 @@ class _HomePageState extends State<HomePage> {
                                 colors["Container_countdown"] =
                                     Color(0xffFBA2A2);
                                 colors["button_start"] = Color(0xffCC5C5C);
+                                countTime = "25:00";
                               });
                             },
                             child: Text("Pomodoro",
@@ -71,6 +74,7 @@ class _HomePageState extends State<HomePage> {
                                 colors["Container_countdown"] =
                                     Color(0xff20C0C5);
                                 colors["button_start"] = Color(0xff0D6E75);
+                                countTime = "5:00";
                               });
                             },
                             child: Text("Short Break",
@@ -85,6 +89,7 @@ class _HomePageState extends State<HomePage> {
                                 colors["Container_countdown"] =
                                     Color(0xffA994FB);
                                 colors["button_start"] = Color(0xff4362FC);
+                                countTime = "15:00";
                               });
                             },
                             child: Text(
@@ -96,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     Text(
-                      "25:00",
+                      "$countTime",
                       style: TextStyle(fontSize: 80, color: Colors.white),
                     ),
                     ElevatedButton(
